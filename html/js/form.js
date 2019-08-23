@@ -30,6 +30,7 @@ class AreaFormat extends React.Component {
         console.log('caught it!',err);
       });
     }
+
     render() {
            return (
            <div className="container">
@@ -37,7 +38,7 @@ class AreaFormat extends React.Component {
                    <table className="table table-hover">
                        <thead>
                           <tr>
-                            <th>{this.state.areal_id}</th>
+                            <th className="omraade">{this.state.areal_id}</th>
                           </tr>
                            <tr>
                                <th>År</th>
@@ -64,6 +65,7 @@ class AreaFormat extends React.Component {
          );
    }
 }
+
 const areaformat = ReactDOM.render(<AreaFormat/>, window.document.getElementById("Form"));
 
 function checkChange(object)
@@ -72,7 +74,9 @@ function checkChange(object)
   {
     return false;
   }
+
   object=object.form;
+
   if(object[0]!==undefined)
   {
       if(object[0].areal-object[object.length-1].areal)

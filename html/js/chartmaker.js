@@ -1,7 +1,9 @@
 const canvas = document.getElementById('geochart');
 const ctx = canvas.getContext('2d');
+
 var gchart;
 var norgechart;
+
 function updateChart(form)
 {
   if(norgechart==null)

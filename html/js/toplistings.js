@@ -46,7 +46,7 @@ class TopFormat extends React.Component {
            return (
            <div className="container">
                <div className="formcontainer">
-                   <table className="table table-hover">
+                   <table className="table table-hover" >
                        <thead>
                            <tr>
                                <th>Navn</th>

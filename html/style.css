@@ -1,6 +1,8 @@
 body{
   max-height: 900px;
-  min-width: 400px;
+  min-width: 750px;
+  max-width: 900px;
+  margin: auto;  
 }
 
 path{
@@ -35,11 +37,12 @@ path{
   width: 170px;
   height: 100px;
 }
-.searchbar {
-  width: 25%;
+#searchbar {
+ 
   height: 50px;
   left: 0;
   padding-left: 15px;
+  margin-top:1.2em;
 }
 .searchbar-button {
   height: 56px;;
@@ -171,8 +174,35 @@ footer p
   margin-bottom: -100%;
 }
 .show {display:block;}
+
 .formcontainer
 {
   font-family: adelle,monospace;
   padding-top:75px; 
+}
+
+/* ting jeg har lagt til */
+.navbar 
+{
+height: 100px;
+padding-top: 20px;
+}
+
+.menubtn
+{
+height:100px;
+min-width: 100px;
+max-width: 140px;
+font-size: 1.6em;
+}
+
+.table{
+
+  font-size:1.4em; 
+  margin:auto;
+}
+
+.omraade
+{
+padding:20px;
 }
