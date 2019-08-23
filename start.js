@@ -50,8 +50,12 @@ app.get('/getinfo', function(req, res){
   if(req.query.area_id)
   {
     var q="";
+
+    //#region
     //select sum(landbruksareal), kommunelandbruksareal.aar, fylke.id from kommune, fylke, kommuner_over_tid, kommunelanadress ="/getinfo?areal_id="+this.state.areal_id;dbruksareal where fylke.id=Fylke_id and kommune.id=kommuner_over_tid.kommune_id and kommunelandbruksareal.kommune_id=kommune.id GROUP BY fylke.id,kommunelandbruksareal.aar;
     //db.query("SELECT id, (sum(landbruksareal)/(areal*1000.0*count(*))) as averagepercent FROM kommune, kommunelandbruksareal where Kommune_id="+req.query.areal_id+" and Kommune_id=id", function (err, result, fields) {
+
+  //#endregion
     if(isNaN(req.query.area_id))
     {
       if(req.query.area_id.toUpperCase()=="NORGE")

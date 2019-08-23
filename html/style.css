@@ -196,13 +196,42 @@ max-width: 140px;
 font-size: 1.6em;
 }
 
-.table{
-
-  font-size:1.4em; 
+.table{  
+  font-size:1em; 
   margin:auto;
+  width: 80%;
+  border-collapse: collapse;
 }
 
 .omraade
 {
 padding:20px;
+font-weight: bolder;
+font-size: 1.4em;
+}
+
+thead
+{
+text-align: left;
+}
+
+td, th {
+  border:1px solid #ddd;
+  padding:6px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.change{
+  text-align: center;
 }

@@ -17,7 +17,8 @@ class TopFormat extends React.Component {
     componentDidMount()
     {
       let self = this;
-        fetch("/gettop?aar="+this.state.aar, {
+        
+      fetch("/gettop?aar="+this.state.aar, {
             method: 'GET'
         }).then(function(response) {
             if (response.status >= 400) {
@@ -29,6 +30,7 @@ class TopFormat extends React.Component {
         }).catch(err => {
         console.log('caught it!',err);
       });
+      
       fetch("/getbot?aar="+this.state.aar, {
           method: 'GET'
       }).then(function(response) {
@@ -42,6 +44,7 @@ class TopFormat extends React.Component {
       console.log('caught it!',err);
     });
     }
+    
     render() {
            return (
            <div className="container">
@@ -49,9 +52,11 @@ class TopFormat extends React.Component {
                    <table className="table table-hover" >
                        <thead>
                            <tr>
-                               <th>Navn</th>
-                               <th>Økt mest</th>
-                               <th>{this.state.aar[0]}-{this.state.aar[1]}</th>
+                           <th>{this.state.aar[0]}-{this.state.aar[1]}</th>
+                           </tr>
+                           <tr>
+                               <th>Kommune</th>
+                               <th>Økt mest</th>                               
                            </tr>
                        </thead>
                        <tbody>
@@ -65,9 +70,9 @@ class TopFormat extends React.Component {
                        </tbody>
                        <thead>
                            <tr>
-                               <th></th>
+                               <th>Kommune</th>
                                <th>Minket mest</th>
-                               <th></th>
+                               
                            </tr>
                        </thead>
                        <tbody>

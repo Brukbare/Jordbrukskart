@@ -42,6 +42,7 @@ class AreaFormat extends React.Component {
                           </tr>
                            <tr>
                                <th>År</th>
+                               <th>Areal</th>
                                <th>Landbruksareal</th>
                                <th>Prosent</th>
                            </tr>
@@ -49,8 +50,9 @@ class AreaFormat extends React.Component {
                        <tbody>
 
                        {this.state.form.map(area =>
-                        <tr key={area.aar}>
+                        <tr key={area.aar}>                        
                         <td>{area.aar}&nbsp;</td>
+                        <td>{area.areal} km²</td>
                         <td>&nbsp;&nbsp;{area.landbruksareal} km²</td>
                         <td>{area.percent}%</td>
                         </tr>
@@ -58,7 +60,7 @@ class AreaFormat extends React.Component {
                        </tbody>
                    </table>
                    {checkChange(this.state) &&
-                     <p>Dette området har endret total areal</p>
+                     <p className="change">Dette området har endret total areal</p>
                    }
                </div>
            </div>
